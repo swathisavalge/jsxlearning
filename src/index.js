@@ -1,12 +1,39 @@
+//Importing react libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const buttonText = {text: 'click me here!'};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//Below is a react component
+const App = () => {
+    return (
+      <div>
+        <label className='label' htmlFor='name'>Enter Name:</label>
+        <input id='name' type='text' />
+        <button style={{backgroundColor:'blue', color:'white'}} >{buttonText.text}</button>
+      </div>
+    );
+};
+
+class App extends React.Component{
+  
+}
+
+//section 2 Test
+
+// function getTime() {
+//   return (new Date()).toLocaleTimeString()
+// }
+
+// //Below is a react component
+// const App = () => {
+//     return (
+//       <div>
+//         <div>Current Time:</div>
+//         <h3>{getTime()}</h3>
+//        </div>
+//     );
+// };
+
+// Using react-dom to show content on the browser
+ReactDOM.render(<App />,document.getElementById('root'));
